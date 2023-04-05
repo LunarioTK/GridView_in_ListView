@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gridview_in_listwiew">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
    <application
+        android:requestLegacyExternalStorage="true"
         android:label="gridview_in_listwiew"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

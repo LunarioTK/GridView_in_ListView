@@ -2,10 +2,9 @@ import 'dart:io';
 
 class BookModel {
   final File file;
-  final String? bookName;
+  final String? title;
   final String? author;
-  final int bookId;
+  final int? bookId;
 
-  BookModel(
-      {this.bookName, required this.bookId, this.author, required this.file});
+  BookModel({this.title, this.bookId, this.author, required this.file});
 }
