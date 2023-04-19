@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:gridview_in_listwiew/model/bookinfo_model.dart';
 import 'package:gridview_in_listwiew/view/colors_view.dart';
@@ -8,9 +6,9 @@ import 'package:pdf_render/pdf_render_widgets.dart';
 import 'package:provider/provider.dart';
 
 class Book extends StatelessWidget {
-  File? file;
+  String? filePath;
   int? index;
-  Book({super.key, this.index, required this.file});
+  Book({super.key, this.index, required this.filePath});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,7 @@ class Book extends StatelessWidget {
             child: Material(
               elevation: 10,
               child: PdfDocumentLoader.openFile(
-                file?.path ?? bookInfo.getFile.path,
+                filePath ?? bookInfo.getFile.path,
                 pageNumber: 1,
                 pageBuilder: (context, textureBuilder, pageSize) =>
                     textureBuilder(

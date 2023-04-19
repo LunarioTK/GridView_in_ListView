@@ -30,7 +30,7 @@ class BookInfo extends ChangeNotifier {
   // Setting File
   set setFile(File newFile) {
     _file = newFile;
-    _books.add(BookModel(bookId: getbooksAdded, file: newFile));
+    _books.add(BookModel(bookId: getbooksAdded, filePath: newFile.path));
     //notifyListeners();
   }
 
