@@ -16,11 +16,11 @@ class BookModelAdapter extends TypeAdapter<BookModel> {
   @override
   BookModel read(BinaryReader reader) {
     // Deserialize the object from binary
-    final filePath = reader.readString();
     final title = reader.readString();
+    final filePath = reader.readString();
     //final bookId = reader.readInt();
 
-    return BookModel(title: title /*, bookId: bookId*/, filePath: filePath);
+    return BookModel(title: title, filePath: filePath);
   }
 
   @override

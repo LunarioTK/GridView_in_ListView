@@ -20,7 +20,7 @@ class Book extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              print('Clicked');
+              print(filePath);
             },
             child: Material(
               elevation: 10,

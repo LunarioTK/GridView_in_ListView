@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
     // TODO: implement initState
     super.initState();
 
-    if (_box.get("BOOKLIST")!.isNotEmpty) {
+    if (_box.get("BOOKLIST") != null) {
       bVM.loadData();
     } else {
       print('vazio');
@@ -64,7 +64,7 @@ class _HomeState extends State<Home> {
             itemBuilder: (BuildContext context, int index) {
               final book = bVM.bookList[index];
               return Book(
-                filePath: book.title,
+                filePath: book.filePath,
                 index: index,
               );
             },
